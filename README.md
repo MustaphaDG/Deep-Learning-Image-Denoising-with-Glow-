@@ -3,22 +3,25 @@
 
 ## Introduction
 
-This project implements an image denoising script using the Glow model. The Glow model is a generative model used for various tasks, including image denoising. This README provides essential information for users and contributors to understand and use the denoising script.
+This project focuses on image denoising using the Glow model, a powerful generative model. The Glow model, implemented in PyTorch, is employed to remove noise from images, resulting in cleaner and visually appealing reconstructions. The denoising script provided in this repository offers a flexible and customizable solution for users interested in exploring the capabilities of Glow in the context of image processing.
 
 ## Description
 
-The script utilizes PyTorch, torchvision, and other libraries for deep learning and image processing. Glow model parameters are optimized to recover denoised images from noisy input. The denoising process involves optimization loops, performance metric evaluation, and optional result saving.
+### Workflow Overview
 
-## Getting Started
+The denoising script follows a structured workflow:
 
-### Prerequisites
+1. **Data Loading:** Utilizes the torchvision library to load image datasets for denoising.
+2. **Glow Model Configuration:** Loads a pre-trained Glow model and sets up the necessary configurations.
+3. **Noise Generation:** Introduces noise to the input images using Gaussian or Laplacian noise types.
+4. **Optimization Loop:** Applies an optimization algorithm to adjust the Glow model parameters for image reconstruction.
+5. **Performance Evaluation:** Measures denoising performance using metrics such as PSNR (Peak Signal-to-Noise Ratio).
+6. **Result Saving:** Optionally saves denoised images and performance metrics for further analysis.
 
-- Python (version X.X)
-- PyTorch (version X.X)
-- Other dependencies (list them if necessary)
+### Getting Started
 
-### Installation
+#### Prerequisites
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/your-repository.git
+- Python (>=3.6)
+- PyTorch (>=1.8.0)
+
